@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --color-Desaturated-Red: hsl(0, 36%, 70%);
+    --color-Soft-Red: hsl(0, 93%, 68%);
+    --color-Linear-Gradient-Active-First: hsl(0, 0%, 100%);
+    --color-Linear-Gradient-Active-Second: hsl(0, 100%, 98%);
+    --color-Linear-Gradient-Inactive-First: hsl(0, 80%, 86%);
+    --color-Linear-Gradient-Inactive-Second: hsl(0, 74%, 74%);
+}
+
+* {
+    font-family: "Josefin Sans", sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('./images/bg-pattern-desktop.svg') no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
+.container {
+    margin: auto 14em;
+    max-width: 1200px;
+}
+nav {
+    margin-top: 3em;
+}
+.upper {
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+}
+.hero-text {
+    width: 400px;
+    margin-top: -43em;
+    position: absolute;
+}
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    line-height: 1.2;
+}
+.light {
+    font-weight: lighter;
+}
+.colored{
+    color: var(--color-Desaturated-Red);
+}
+p {
+    font-size: 1rem;
+}
+
+img {
+    position: relative;
+    left: 42.8em;
+    bottom: 6em;
+}
+
+.small-image {
+    display: none;
+}
+
+input {
+    width: 400px;
+    padding: 1em 1.5em;
+    margin-top: 2em;
+    border: 2px solid var(--color-Desaturated-Red);
+    border-radius: 2em;
+}
+
+input::placeholder {
+    color: var(--color-Desaturated-Red);
+}
+
+input:hover {
+    border: 2px solid var(--color-Soft-Red);
+}
+input:focus {
+    border-color: var(--color-Desaturated-Red);
+    outline: none;
+}
+
+button {
+    width: 120px;
+    padding: 0.9em 1em;
+    border: 2px solid transparent; /* Create a transparent border */
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 74%, 74%)); /* Apply the gradient */
+    background-clip: padding-box, border-box; /* Clip background to border */
+    border-radius: 2.2em;
+    position: relative;
+    left: 24.4em;
+    bottom: 4em;
+}
+button svg {
+    margin: 0;
+}
+
+button:hover {
+    border: 2px solid transparent; /* Create a transparent border */
+    background: linear-gradient(135deg, hsl(0, 100%, 98%), hsl(0, 80%, 86%));
+    background-clip: padding-box, border-box; /* Clip background to border */
+}
+.error-icon {
+    position: absolute;
+    left: 18em;
+    bottom: 5.8em;
+}
+.hidden {
+    display: none;
+}
+.error-message {
+    position: relative;
+    font-size: 0.8rem;
+    left: 1em;
+    bottom: 4em;
+    width: 120px;
+}
+
+
+
+
+
+
+
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .container {
+        margin: auto 6em;
+    }
+    .hero-text {
+        width: 300px;
+        margin-top: -33em;
+        position: absolute;
+    }
+    
+    img {
+        position: relative;
+        width: 467px;
+        left: 28.8em;
+        bottom: 6em;
+    }
+    
+    .small-image {
+        display: none;
+    }
+    
+    input {
+        width: 300px;
+        padding: 1em 1.5em;
+        margin-top: 2em;
+        border: 2px solid var(--color-Desaturated-Red);
+        border-radius: 2em;
+    }
+    
+    button {
+        width: 120px;
+        padding: 0.9em 1em;
+        border: 2px solid transparent; /* Create a transparent border */
+        background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 74%, 74%)); /* Apply the gradient */
+        background-clip: padding-box, border-box; /* Clip background to border */
+        border-radius: 2.2em;
+        position: relative;
+        left: 17em;
+        bottom: 4em;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    .container {
+        margin: auto 4em;
+        max-width: 900px;
+    }
+    .hero-text {
+        width: 300px;
+        margin-top: -30em;
+        position: absolute;
+    }
+    
+    img {
+        position: relative;
+        left: 25em;
+        bottom: 6em;
+        width: 370px;
+    }
+    input {
+        width: 290px;
+        padding: 1em 1.5em;
+        margin-top: 2em;
+        border: 2px solid var(--color-Desaturated-Red);
+        border-radius: 2em;
+    }
+    button {
+        width: 120px;
+        padding: 0.9em 1em;
+        border: 2px solid transparent; /* Create a transparent border */
+        background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 74%, 74%)); /* Apply the gradient */
+        background-clip: padding-box, border-box; /* Clip background to border */
+        border-radius: 2.2em;
+        position: relative;
+        left: 16em;
+        bottom: 4em;
+    }
+    .error-icon {
+        position: relative;
+        left: 13em;
+        bottom: 3em;
+    }
+}
+
+
+
+
+
+@media (max-width: 600px) {
+    body {
+        margin: 0;
+        padding: 0;
+        background: url('./images/bg-pattern-desktop.svg') no-repeat contain;
+        height: 100vh;
+    }
+    .container {
+        margin: 1em auto;
+        max-width: 100%;
+    }
+    nav {
+        margin-top: 0em;
+        padding: 1.5em 2em;
+    }
+    .upper {
+        text-transform: uppercase;
+        letter-spacing: 0.4em;
+    }
+    .hero-text {
+        width: 350px;
+        position: relative;
+        text-align: center;
+        margin: 3em auto;
+    }
+    h1 {
+        font-size: 3rem;
+        margin: 0;
+        line-height: 1.2;
+    }
+    .light {
+        font-weight: lighter;
+    }
+    .colored{
+        color: var(--color-Desaturated-Red);
+    }
+    p {
+        font-size: 1rem;
+    }
+
+    .big-image {
+        display: none;
+    }
+    .small-image {
+        display: block;
+    }
+    img {
+        left: 0em;
+        bottom: 0em;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+    
+    input {
+        width: 300px;
+        padding: 1em 1.5em;
+        margin-top: 2em;
+        border: 2px solid var(--color-Desaturated-Red);
+        border-radius: 2em;
+    }
+    button {
+        position: relative;
+        width: 100%;
+        width: 80px;
+        left: 10em;
+        bottom: 4em;
+    }
+    .error-icon {
+        position: relative;
+        left: 8em;
+        bottom: 3em;
+    }
+    .error-message {
+        left: -5em;
+    }
+}
+
